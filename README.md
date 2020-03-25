@@ -3,9 +3,19 @@
 
 We are using [Airbnb](https://github.com/airbnb/javascript) as foundation. *A mostly reasonable approach to JavaScript*
 
-Airbnb references:
-eslint-config-airbnb [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
-eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
+**Our linters:**  
+TSLint(Typescript):   
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/FusionWorks/ts-lint.svg?label=Version)](https://github.com/FusionWorks/ts-lint) 
+[![npm downloads](https://img.shields.io/npm/dm/@fusionworks/ts-lint.svg)](https://npmjs.org/@fusionworks/ts-lint)  
+
+ESLint(Javascript/NodeJs):  
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/FusionWorks/es-lint.svg?label=Version)](https://github.com/FusionWorks/es-lint) 
+[![npm downloads](https://img.shields.io/npm/dm/@fusionworks/es-lint.svg)](https://npmjs.org/@fusionworks/eslint-config)  
+  
+
+**Airbnb references:**
+eslint-config-airbnb [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)  
+eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)  
 
 This guide is available in other languages too. See [Translation](#translation)
 
@@ -34,20 +44,14 @@ This guide is available in other languages too. See [Translation](#translation)
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
   1. [Events](#events)
-  1. [jQuery](#jquery)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
   1. [Standard Library](#standard-library)
   1. [Testing](#testing)
   1. [Performance](#performance)
   1. [Resources](#resources)
-  1. [In the Wild](#in-the-wild)
   1. [Translation](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About JavaScript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
   1. [License](#license)
-  1. [Amendments](#amendments)
 
 ## References
 
@@ -3670,18 +3674,6 @@ This guide is available in other languages too. See [Translation](#translation)
   - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Turkish**: [eraycetinay/javascript](https://github.com/eraycetinay/javascript)
   - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript)
   - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnam**: [dangkyokhoang/javascript-style-guide](https://github.com/dangkyokhoang/javascript-style-guide)
-
-## The JavaScript Style Guide Guide
-
-  - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
-
-## Chat With Us About JavaScript
-
-  - Find us on [gitter](https://gitter.im/airbnb/javascript).
-
-## Contributors
-
-  - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
 
 ## License
 
