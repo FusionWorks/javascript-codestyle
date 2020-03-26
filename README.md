@@ -3,9 +3,7 @@
 
 We are using [Airbnb](https://github.com/airbnb/javascript) as foundation. *A mostly reasonable approach to JavaScript*
 
-```text
-Note that some frameworks or libraries can have their own Design Pattern, to which this Style Guide may not fit completely.
-```
+> Note that some frameworks or libraries can have their own Design Pattern, to which this Style Guide may not fit completely.
 
 **Our linters:**  
 TSLint(Typescript):   
