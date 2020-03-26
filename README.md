@@ -3561,30 +3561,37 @@ This guide is available in other languages too. See [Translation](#translation)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Code Quality Guardians
+## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
 
 <table name="code-quality-guardians">
   <tbody>
   <tr>
-    <td align ="center">
+    <td align="center">
       <a href="https://github.com/grigoreme">
         <img src="https://avatars2.githubusercontent.com/u/25903855?s=460&u=8ab96138416c05cd14101fa82b96ba78b4533de9&v=4" width="100px;" alt=""/>
         <br />
         <sub><b>Grigore Meleca</b></sub>
       </a>
     </td>
-    <td align ="center">
+    <td align="center">
       <a href="https://github.com/mracila25">
         <img src="https://avatars3.githubusercontent.com/u/40491654?s=460&u=750c40f0ab1e78823040b05fe4bc372f9cc64a5e&v=4" width="100px;" alt=""/>
         <br />
         <sub><b>Mihail Racila</b></sub>
       </a>
     </td>
-    <td align ="center">
+    <td align="center">
       <a href="https://github.com/tfarras">
         <img src="https://avatars0.githubusercontent.com/u/29577762?s=460&u=1e1c5c40fff0de63ff499b1eb8b586540cc85b29&v=4" width="100px;" alt=""/>
         <br />
         <sub><b>Taimoor Farras</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/vladpolewoi">
+        <img src="https://avatars0.githubusercontent.com/u/47645876?s=460&u=3c8bafc1ad67b521e9d1a49b9074cbd574710bf5&v=4" width="100px;" alt=""/>
+        <br />
+        <sub><b>Vlad Polewoi</b></sub>
       </a>
     </td>
   </tr>
