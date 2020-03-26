@@ -3560,6 +3560,7 @@ This guide is available in other languages too. See [Translation](#translation)
 **[⬆ back to top](#table-of-contents)**
 
 ## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
+These are the persons you may ask questions regarding code-quality to.  
 
 <table>
   <tbody>
