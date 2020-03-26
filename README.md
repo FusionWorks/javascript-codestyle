@@ -15,7 +15,7 @@ ESLint(Javascript/NodeJs):
 [![npm downloads](https://img.shields.io/npm/dm/@fusionworks/es-lint.svg)](https://npmjs.org/@fusionworks/eslint-config)  
   
 
-**Airbnb references:**
+**Airbnb references:**  
 eslint-config-airbnb [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)  
 eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)  
 
