@@ -1883,23 +1883,23 @@ This guide is available in other languages too. See [Translation](#translation)
       // ...
     }
 
-    // good
-    if (name) {
-      // ...
-    }
-
     // bad
     if (name !== '') {
       // ...
     }
 
     // good
-    if (collection.length) {
+    if (name) {
       // ...
     }
 
     // bad
     if (collection.length > 0) {
+      // ...
+    }
+
+    // good
+    if (collection.length) {
       // ...
     }
     ```
