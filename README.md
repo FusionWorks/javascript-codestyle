@@ -914,15 +914,15 @@ This guide is available in other languages too. See [Translation](#translation)
 
     ```javascript
     // bad
-    ['get', 'post', 'put'].map((httpMethod) => httpMagicObjectWithAVeryLongName(
+    ['get', 'post', 'put'].map((httpMethod) => httpMagicObjectWithAVeryLongName.hasOwnProperty(
       httpMethod,
     ));
 
     // good
     ['get', 'post', 'put'].map((httpMethod) => (
-      httpMagicObjectWithAVeryLongName(
+      httpMagicObjectWithAVeryLongName.hasOwnProperty(
         httpMethod,
-      ),
+      )
     ));
     ```
 
