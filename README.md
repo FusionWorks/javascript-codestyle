@@ -52,7 +52,7 @@ This guide is available in other languages too. See [Translation](#translation)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
   1. [Standard Library](#standard-library)
-  1. [Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="13">](#code-quality-guardians)
+  1. [Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="13">](#code-quality-guardians--)
   1. [Performance](#performance)
   1. [Resources](#resources)
   1. [Translation](#translation)
@@ -3563,7 +3563,7 @@ This guide is available in other languages too. See [Translation](#translation)
 
 ## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
 
-<table name="code-quality-guardians">
+<table>
   <tbody>
   <tr>
     <td align="center">
