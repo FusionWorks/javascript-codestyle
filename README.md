@@ -48,7 +48,6 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
   1. [Standard Library](#standard-library)
-  1. [Best Practices](#best-practices)
   1. [Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="13">](#code-quality-guardians--)
   1. [Performance](#performance)
   1. [Resources](#resources)
@@ -1742,6 +1741,68 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     // This is a form of extracting an object that omits the specified keys.
     var { type, ...coords } = data;
     // 'coords' is now the 'data' object without its 'type' property.
+    ```
+
+    <a name="standard-library--no-magic-numbers"></a>
+  - [13.9](#standard-library--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers
+
+    > Note: If you make new file with const, make sure they are immutable.
+
+    ```javascript
+    // bad
+    function calculatePrice(price) {
+      return price + (price * 0.25);
+    }
+
+    // good
+    function calculatePrice(price) {
+      const TAX = 0.25;
+
+      return price + (price * TAX);
+    }
+
+    // bad
+    if (count === 2) {
+      // code
+    }
+
+    // good
+    const SOME_MAGIC_STUFF = 2; // top of file or constant file
+
+    if (count === SOME_MAGIC_STUFF) {
+      // code
+    }
+    ```
+
+  <a name="standard-library--enum-as-object"></a>
+  - [13.10](#standard-library--enum-as-object) To use ENUMs as object use Object.freeze to prevent mutations in ENUM.
+
+    ```javascript
+    // bad
+    const enum = {
+      SUNDAY: 1,
+      MONDAY: 2,
+    }
+
+    enum.SUNDAY // 1
+    enum.SUNDAY = 99
+    enum.SUNDAY // 99
+
+    enum.NEW_DAY = 8
+    enum.NEW_DAY // 8
+
+    // good
+    const enum = Object.freeze({
+      SUNDAY: 1,
+      MONDAY: 2,
+    })
+
+    enum.SUNDAY // 1
+    enum.SUNDAY = 99 // error
+
+    enum.NEW_DAY = 8 // error
+
+    enum = [] // error
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -3556,70 +3617,6 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     ```
 
 **[⬆ back to top](#table-of-contents)**
-
-## Best Practices
-
-  <a name="standard-library--no-magic-numbers"></a>
-  - [30.1](#standard-library--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers
-
-    > Note: If you make new file with const, make sure they are immutable.
-
-    ```javascript
-    // bad
-    function calculatePrice(price) {
-      return price + (price * 0.25);
-    }
-
-    // good
-    function calculatePrice(price) {
-      const TAX = 0.25;
-
-      return price + (price * TAX);
-    }
-
-    // bad
-    if (count === 2) {
-      // code
-    }
-
-    // good
-    const SOME_MAGIC_STUFF = 2; // top of file or constant file
-
-    if (count === SOME_MAGIC_STUFF) {
-      // code
-    }
-    ```
-
-  <a name="standard-library--enum-as-object"></a>
-  - [30.2](#standard-library--enum-as-object) To use ENUMs as object use Object.freeze to prevent mutations in ENUM.
-
-    ```javascript
-    // bad
-    const enum = {
-      SUNDAY: 1,
-      MONDAY: 2,
-    }
-
-    enum.SUNDAY // 1
-    enum.SUNDAY = 99
-    enum.SUNDAY // 99
-
-    enum.NEW_DAY = 8
-    enum.NEW_DAY // 8
-
-    // good
-    const enum = Object.freeze({
-      SUNDAY: 1,
-      MONDAY: 2,
-    })
-
-    enum.SUNDAY // 1
-    enum.SUNDAY = 99 // error
-
-    enum.NEW_DAY = 8 // error
-
-    enum = [] // error
-    ```
 
 ## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
 These are the persons you may ask questions regarding code-quality to.  
