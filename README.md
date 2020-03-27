@@ -3562,6 +3562,8 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
   <a name="standard-library--no-magic-numbers"></a>
   - [30.1](#standard-library--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers
 
+    > Note: If you make new file with const, make sure they are immutable.
+
     ```javascript
     // bad
     function calculatePrice(price) {
@@ -3612,11 +3614,11 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     })
 
     enum.SUNDAY // 1
-    enum.SUNDAY = 99
-    enum.SUNDAY // 1
+    enum.SUNDAY = 99 // error
 
-    enum.NEW_DAY = 8
-    enum.NEW_DAY // undefined
+    enum.NEW_DAY = 8 // error
+
+    enum = [] // error
     ```
 
 ## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
