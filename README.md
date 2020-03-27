@@ -1743,6 +1743,68 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     // 'coords' is now the 'data' object without its 'type' property.
     ```
 
+    <a name="standard-library--no-magic-numbers"></a>
+  - [13.9](#standard-library--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers
+
+    > Note: If you make new file with const, make sure they are immutable.
+
+    ```javascript
+    // bad
+    function calculatePrice(price) {
+      return price + (price * 0.25);
+    }
+
+    // good
+    function calculatePrice(price) {
+      const TAX = 0.25;
+
+      return price + (price * TAX);
+    }
+
+    // bad
+    if (count === 2) {
+      // code
+    }
+
+    // good
+    const SOME_MAGIC_STUFF = 2; // top of file or constant file
+
+    if (count === SOME_MAGIC_STUFF) {
+      // code
+    }
+    ```
+
+  <a name="standard-library--enum-as-object"></a>
+  - [13.10](#standard-library--enum-as-object) To use ENUMs as object use Object.freeze to prevent mutations in ENUM.
+
+    ```javascript
+    // bad
+    const enum = {
+      SUNDAY: 1,
+      MONDAY: 2,
+    }
+
+    enum.SUNDAY // 1
+    enum.SUNDAY = 99
+    enum.SUNDAY // 99
+
+    enum.NEW_DAY = 8
+    enum.NEW_DAY // 8
+
+    // good
+    const enum = Object.freeze({
+      SUNDAY: 1,
+      MONDAY: 2,
+    })
+
+    enum.SUNDAY // 1
+    enum.SUNDAY = 99 // error
+
+    enum.NEW_DAY = 8 // error
+
+    enum = [] // error
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Hoisting
