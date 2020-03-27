@@ -1743,12 +1743,10 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     // 'coords' is now the 'data' object without its 'type' property.
     ```
 
-    <a name="standard-library--no-magic-numbers"></a>
-  - [13.9](#standard-library--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers
+    <a name="variables--no-magic-numbers"></a>
+  - [13.9](#variables--no-magic-numbers) 'Magic numbers' are numbers that occur multiple times in code without an explicit meaning. They should preferably be replaced by named constants. eslint: no-magic-numbers  
 
-    > Note: If you make new file with const, make sure they are immutable.
-
-    ```javascript
+     ```javascript
     // bad
     function calculatePrice(price) {
       return price + (price * 0.25);
@@ -1767,22 +1765,22 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     }
 
     // good
-    const SOME_MAGIC_STUFF = 2; // top of file or constant file
+    const EXPLICIT_VARIABLE = 2;
 
     if (count === SOME_MAGIC_STUFF) {
       // code
     }
     ```
 
-  <a name="standard-library--enum-as-object"></a>
-  - [13.10](#standard-library--enum-as-object) To use ENUMs as object use Object.freeze to prevent mutations in ENUM.
+  <a name="variables--enum-as-object"></a>
+  - [13.10](#variables--enum-as-object) When using an object as an ENUM,  use Object.freeze() make sure it's immutable.
 
     ```javascript
     // bad
     const enum = {
       SUNDAY: 1,
       MONDAY: 2,
-    }
+    };
 
     enum.SUNDAY // 1
     enum.SUNDAY = 99
@@ -1795,14 +1793,38 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     const enum = Object.freeze({
       SUNDAY: 1,
       MONDAY: 2,
-    })
+    });
 
     enum.SUNDAY // 1
-    enum.SUNDAY = 99 // error
+    enum.SUNDAY = 99; // error
 
-    enum.NEW_DAY = 8 // error
+    enum.NEW_DAY = 8; // error
 
-    enum = [] // error
+    enum = []; // error
+    ```
+
+<a name="variables--file-with-constants"></a>
+  - [13.11](#variables--file-with-constants) Keep your constants in a separate file made of constants only. In case you will need the same variable to be used in a different file you import only it. All the constant files should be made of immutable only objects.
+
+    ```javascript
+    // bad
+    const enum = {
+      SUNDAY: 1,
+      MONDAY: 2,
+    };
+
+    // code
+
+
+    // still bad
+    const { enum, tax, days } = require('date-constants');
+
+    // code
+
+    // good
+    const { ENUM, TAX, DAYS } = require('date-constants');
+
+    // code
     ```
 
 **[⬆ back to top](#table-of-contents)**
