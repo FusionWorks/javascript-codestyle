@@ -1372,8 +1372,8 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
 
     ```javascript
     // bad
-    import foo from 'foo';
-    import baz from 'baz';
+    import foo from './foo';
+    import baz from './baz';
     import moment from 'moment';
     import CONSTANT_A from './constant_a';
     import helperX from './helper_x';
@@ -1392,8 +1392,8 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     import _ from 'lodash';
     import moment from 'moment';
     
-    import foo from 'foo';
-    import baz from 'baz';
+    import foo from './foo';
+    import baz from './baz';
     import helperX from './helper_x';
     import utilityY from './helper_y';
     
