@@ -1,4 +1,5 @@
 
+
 # FusionWorks JavaScript Style Guide
 
 We are using [Airbnb](https://github.com/airbnb/javascript) as foundation. *A mostly reasonable approach to JavaScript*
@@ -48,7 +49,7 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
   1. [Standard Library](#standard-library)
-  1. [Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="13">](#code-quality-guardians--)
+  1. [Code Quality Guardians <img src="./img/shield.png" height="13">](#code-quality-guardians--)
   1. [Performance](#performance)
   1. [Resources](#resources)
   1. [License](#license)
@@ -1347,6 +1348,63 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
     import foo from './foo';
     import bar from './bar';
     import baz from './baz';
+    ```
+ <a name="modules--import-external-first"></a>
+  - [10.11](#modules--import-external-first) Always import external modules first
+    > Why? Imports might get messy as a file may have 20+ imports, having them in random order will lead to no trackability of external packages used.
+
+    ```javascript
+    // bad
+    import foo from 'foo';
+    import bar from './bar.jsx';
+    import baz from 'baz';
+
+    // good
+    import foo from 'foo';
+    import baz from 'baz';
+    import bar from './bar.jsx';
+    ```
+    
+    <a name="modules--import-grouping"></a>
+  - [10.12](#modules--import-grouping) If you find that a file has more than 10 imports please divide them by an empty line
+    > Why? Having multiple imports of many types may result in search of where you imported X.
+
+    ```javascript
+    // bad
+    import foo from 'foo';
+    import baz from 'baz';
+    import moment from 'moment';
+    import CONSTANT_A from './constant_a';
+    import helperX from './helper_x';
+    import utilityY from './helper_y';
+    import CONSTANT_B from './constant_b';
+    import _ from 'lodash';
+    import {
+      ENUM_X,
+      ENUM_Y,
+      validator,
+    } from './enum';
+    import ENUM from './enum';
+
+
+    // good
+    import _ from 'lodash';
+    import moment from 'moment';
+    
+    import foo from 'foo';
+    import baz from 'baz';
+    import helperX from './helper_x';
+    import utilityY from './helper_y';
+    
+    import CONSTANT_A from './constant_a';
+    import CONSTANT_B from './constant_b';
+    import ENUM from './enum';
+    import {
+      ENUM_X,
+      ENUM_Y,
+      validator,
+    } from './enum';
+
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -3640,7 +3698,7 @@ eslint-config-airbnb-base [![Downloads](https://img.shields.io/npm/dm/eslint-con
 
 **[⬆ back to top](#table-of-contents)**
 
-## Code Quality Guardians  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/shield_1f6e1.png" height="30">
+## Code Quality Guardians <img src="./img/shield.png" height="30">
 These are the persons you may ask questions regarding code-quality to.  
 
 <table>
@@ -3672,6 +3730,13 @@ These are the persons you may ask questions regarding code-quality to.
         <img src="https://avatars0.githubusercontent.com/u/47645876?s=460&u=3c8bafc1ad67b521e9d1a49b9074cbd574710bf5&v=4" width="100px;" alt=""/>
         <br />
         <sub><b>Vlad Polewoi</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/cvelinciuc">
+        <img src="https://avatars1.githubusercontent.com/u/29755314?s=460&v=4" width="100px;" alt=""/>
+        <br />
+        <sub><b>Cristian Velinciuc</b></sub>
       </a>
     </td>
   </tr>
